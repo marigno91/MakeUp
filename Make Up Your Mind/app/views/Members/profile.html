@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Profile' /}
+
+<div class="container-fluid">
+    <div class="row-fluid">
+       <div class="span4">
+       #{if m.memberPic != null}
+       <img src = "@{Members.getMemberPic(m.id)}" width = "100" height"100" class="img-thumbnail" > 
+ 		#{/if}
+       </div> 
+  
+
+      <div class="span4">
+      ${m.memberName} <br>
+      #{if m.memberRate != null}
+      Rating: ${m.memberRate}<br>
+      #{/if}
+      
+      <small> Description: ${m.description} <br>
+      Age: ${m.memberAge} <br>
+      </small>
+    </div>
+    
+    <div class="span4">
+    <h3> Physical criteria</h3>
+    Skin color: ${m.skinColor} <br>
+    Skin type: ${m.skinType} <br>
+    Eyes: ${m.eyeColor} <br>
+    Hair color: ${m.hairColor} <br>
+    Hair type: ${m.hairType} <br>
+
+    </div>
+    
+	</div>
+  </div>

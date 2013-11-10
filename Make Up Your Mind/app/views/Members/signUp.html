@@ -1,0 +1,134 @@
+#{extends 'main.html' /}
+#{set title:'Sign Up' /}
+
+<div class="container-fluid">
+<div class="row-fluid">
+   <div class="span1"></div>
+   <div class="span6 offset4">   
+   <h2> Sign Up <small> and Make Up Your Mind ! </small></h2>
+
+<blockquote>
+  <p>Join our community today and identify the products you need right away!</p>
+  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
+</blockquote>
+   </div>
+   <div class="span1"></div>
+</div>
+</div>
+	
+<!-- Form to edit profile -->
+#{form @Members.saveMember(), enctype:'multipart/form-data', id:'form'}
+
+<fieldset>
+<legend> Account Information </legend>
+<!-- Login -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_email" for = "m_email"> Login </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter email address" name = "m.email" id = "m_email" required />
+	</div>
+</div>
+
+<!-- Password -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_password" for = "m_password"> Password </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Choose a password" name = "m.password" id = "m_password" required />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> General Information </legend>
+<!-- Pseudo -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_memberName" for = "m_memberName"> Pseudo </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Choose a pseudo" name = "m.memberName" id = "m_memberName" />
+	</div>
+</div>
+
+<!-- Picture -->
+<div class = "control-group">
+<label class = "control-label" id = "label_m_pic" for = "m_pic"> Picture </label>
+<div class = "controls">
+<input type = "file" name = "m.memberPic" />
+</div>
+</div>
+
+<!-- Age -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_age" for = "m_age"> Age </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Age" name = "m.age" id = "m_age" />
+	</div>
+</div>
+
+<!-- Description -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_description" for = "m_age"> Description </label>
+	<div class = "controls">
+		<textarea type="text" placeholder = "Enter a short description of yourself and what you like" name = "m.description" id = "m_description"> </textarea>
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Skin  </legend>
+<!-- Skin color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_skinColor" for = "m_skinColor"> Skin Color </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter skin color" name = "m.skinColor" id = "m_skinColor" />
+	</div>
+</div>
+
+<!-- Skin Type -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_skinType" for = "m_skinType"> Skin Type </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter type color" name = "m.skinType" id = "m_skinType" />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Eyes </legend>
+
+<!-- Eye color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_eyeColor" for = "m_eyeColor"> Eye Color </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter eye color" name = "m.eyeColor" id = "m_eyeColor" />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Hair </legend>
+<!-- Hair color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_hairColor" for = "m_hairColor"> Hair Color </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter hair color" name = "m.hairColor" id = "m_hairColor" />
+	</div>
+</div>
+
+<!-- Hair Type -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_hairType" for = "m_hairType"> Hair Type </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter hair type" name = "m.hairType" id = "m_hairType" />
+	</div>
+</div>
+
+</fieldset>
+
+<input type="submit" name="submit" value="Sign Up" class="btn btn-primary active">
+
+#{/form}
+

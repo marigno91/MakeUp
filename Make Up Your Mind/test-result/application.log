@@ -1,0 +1,5 @@
+16 oct. 2013 12:00:31,481 INFO  ~ Starting /Users/Marianne/MakeUpYourMind
+16 oct. 2013 12:00:32,104 WARN  ~ You're running Play! in DEV mode
+16 oct. 2013 12:00:32,212 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 oct. 2013 12:01:36,916 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+16 oct. 2013 12:01:37,574 INFO  ~ Application 'Make Up Your Mind' is now started !

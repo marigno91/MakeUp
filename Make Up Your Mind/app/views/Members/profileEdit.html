@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set Title: 'Edit Profile' /}
+
+<!-- Form to edit profile -->
+#{form @Members.save(), enctype:'multipart/form-data'}
+
+<div class = "control-group">
+	<div class = "controls">
+		<input type = "hidden" placeholder = "Id" class = "span2" name = "m.id" id = "m_id" value ="${member.id}" />
+	</div>
+</div>
+
+<!-- Picture -->
+<label class = "control-label" id = "label_m_pic" for = "m_pic"> Picture </label>
+<input type = "file" name = "m.memberPic" />
+
+<!-- Age -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_age" for = "m_age"> Age </label>
+	<div class = "controls"
+		<input type = "text" placeholder = "Age" name = "m.age" id = "m_age" />
+	</div>
+</div>
+
+
+#{/form}
