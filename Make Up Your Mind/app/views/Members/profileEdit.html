@@ -2,25 +2,130 @@
 #{set Title: 'Edit Profile' /}
 
 <!-- Form to edit profile -->
-#{form @Members.save(), enctype:'multipart/form-data'}
+#{form @Members.saveMember(), enctype:'multipart/form-data', id:'form'}
 
+<!-- ID -->
 <div class = "control-group">
 	<div class = "controls">
-		<input type = "hidden" placeholder = "Id" class = "span2" name = "m.id" id = "m_id" value ="${member.id}" />
+		<input type = "hidden" value = "${m.id}" name = "m.id" id = "m_id" readonly />
+	</div>
+</div>
+
+<fieldset>
+<legend> Account Information </legend>
+<!-- Login -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_email" for = "m_email"> Login </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.email}" name = "m.email" id = "m_email" readonly />
+	</div>
+</div>
+
+<!-- Password -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_password" for = "m_password"> Password </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.password}" name = "m.password" id = "m_password"  />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> General Information </legend>
+<!-- Pseudo -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_memberName" for = "m_memberName"> Pseudo </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.memberName}" name = "m.memberName" id = "m_memberName" />
 	</div>
 </div>
 
 <!-- Picture -->
+<div class="span4">
+       #{if m.memberPic != null}
+       <img src = "@{Members.getMemberPic(m.id)}" width = "100" height"100" class="img-thumbnail" > 
+ 		#{/if}
+</div> 
+<div class = "control-group">
 <label class = "control-label" id = "label_m_pic" for = "m_pic"> Picture </label>
+<div class = "controls">
 <input type = "file" name = "m.memberPic" />
+</div>
+</div>
 
 <!-- Age -->
 <div class = "control-group">
 	<label class = "control-label" id = "label_m_age" for = "m_age"> Age </label>
-	<div class = "controls"
-		<input type = "text" placeholder = "Age" name = "m.age" id = "m_age" />
+	<div class = "controls">
+		<input type = "text" value = "${m.memberAge}" name = "m.memberAge" id = "m_age" />
 	</div>
 </div>
 
+<!-- Description -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_description" for = "m_description"> Description </label>
+	<div class = "controls">
+		<textarea type="text" name = "m.description" id = "m_description"> ${m.description} </textarea>
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Skin  </legend>
+<!-- Skin color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_skinColor" for = "m_skinColor"> Skin Color </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.skinColor}" name = "m.skinColor" id = "m_skinColor" />
+	</div>
+</div>
+
+<!-- Skin Type -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_skinType" for = "m_skinType"> Skin Type </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.skinType}" name = "m.skinType" id = "m_skinType" />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Eyes </legend>
+
+<!-- Eye color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_eyeColor" for = "m_eyeColor"> Eye Color </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.eyeColor}" name = "m.eyeColor" id = "m_eyeColor" />
+	</div>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend> Hair </legend>
+<!-- Hair color -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_hairColor" for = "m_hairColor"> Hair Color </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.hairColor}" name = "m.hairColor" id = "m_hairColor" />
+	</div>
+</div>
+
+<!-- Hair Type -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_m_hairType" for = "m_hairType"> Hair Type </label>
+	<div class = "controls">
+		<input type = "text" value = "${m.hairType}" name = "m.hairType" id = "m_hairType" />
+	</div>
+</div>
+
+</fieldset>
+
+<input type="submit" name="submit" value="Sign Up" class="btn btn-primary active">
 
 #{/form}
+

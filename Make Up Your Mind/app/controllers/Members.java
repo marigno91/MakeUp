@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Member;
+import play.mvc.Before;
 import play.mvc.Controller;
 
 public class Members extends Controller {

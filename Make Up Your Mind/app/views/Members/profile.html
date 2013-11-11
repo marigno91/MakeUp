@@ -1,7 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Profile' /}
 
+<h2> Your Profile </h2>
+
 <div class="container-fluid">
+
     <div class="row-fluid">
        <div class="span4">
        #{if m.memberPic != null}
@@ -11,18 +14,18 @@
   
 
       <div class="span4">
-      ${m.memberName} <br>
+      <div class="text-primary"> <strong> Pseudo: ${m.memberName} </strong> <br>
       #{if m.memberRate != null}
-      Rating: ${m.memberRate}<br>
+      Rating: ${m.memberRate} <em> (on ${m.numberOfRatings} votes) </em> <br>
       #{/if}
-      
+      </div>
       <small> Description: ${m.description} <br>
       Age: ${m.memberAge} <br>
       </small>
     </div>
     
     <div class="span4">
-    <h3> Physical criteria</h3>
+    <strong> Physical criteria </strong> <br>
     Skin color: ${m.skinColor} <br>
     Skin type: ${m.skinType} <br>
     Eyes: ${m.eyeColor} <br>
@@ -33,3 +36,6 @@
     
 	</div>
   </div>
+  
+<br>
+<a href="@{Members.profileEdit(m.id)}"> Edit your profile </a>

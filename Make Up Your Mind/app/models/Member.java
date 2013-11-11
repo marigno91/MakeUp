@@ -7,8 +7,6 @@ import play.db.jpa.*;
 
 @Entity
 public class Member extends Model {
-
-	
 	
 	public String memberName;
 	public String password;
@@ -27,6 +25,7 @@ public class Member extends Model {
 	
 	//user rate (coming from the other users)
 	public float memberRate;
+	public int numberOfRatings = 0;
 	
 	//picture
 	public Blob memberPic;

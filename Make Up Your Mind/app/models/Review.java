@@ -2,9 +2,13 @@ package models;
 
 import java.util.Date;
 
-import play.db.jpa.Blob;
+import javax.persistence.Entity;
 
-public class Review {
+import play.db.jpa.Blob;
+import play.db.jpa.Model;
+
+@Entity
+public class Review extends Model{
 	
 	public String reviewDescription;
 	
