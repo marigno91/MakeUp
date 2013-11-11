@@ -17,16 +17,16 @@
         
     </head>
     <body>
+    	<div class = "text-right">
+    	<a href = "@{Secure.logout()}"> Log out now </a>
+    	</div>
+    	
     	<div class = "text-left">
     	<a href = "@{Application.index()}"> Home </a>
-    	<a href = "@{Members.profile(m.id)}"> Profile </a>
     	<a href = "@{Products.productsList()}"> Products </a>
     	<a href = "@{Reviews.reviewsList()}"> Reviews </a>
     	</div>
     	
-    	<div class = "text-right">
-    	<a href = "@{Secure.logout()}"> Log out now </a>
-    	</div>
     	
     	<h1 class = "text-center"> Make Up Your Mind <h1>
     	

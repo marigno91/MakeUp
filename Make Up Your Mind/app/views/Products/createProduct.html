@@ -1,5 +1,58 @@
 #{extends 'main.html' /}
 #{set title:'Add Product' /}
 
+<blockquote>
+  <p>Add a new product to our list and review it!</p>
+  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
+</blockquote>
+
+<!-- Form to edit profile -->
+#{form @Products.saveProduct(), enctype:'multipart/form-data', id:'form'}
+
+<legend> Product Information </legend>
+<!-- name -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productName" for = "p_productName"> Product Name </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter product name" name = "p.productName" id = "p_productName" required />
+	</div>
+</div>
+
+<!-- brand -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productBrand" for = "p_productBrand"> Product Brand </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter product brand" name = "p.productBrand" id = "p_productBrand" required />
+	</div>
+</div>
+
+<!-- Picture -->
+<div class = "control-group">
+<label class = "control-label" id = "label_p_productPic" for = "p_productPic"> Product Picture </label>
+<div class = "controls">
+<input type = "file" name = "p.productPic" />
+</div>
+</div>
+
+
+<!-- Price -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productPrice" for = "p_productPrice"> Product Price </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter product price" name = "p.productPrice" id = "p_productPrice" />
+	</div>
+</div>
+
+<!-- Launching date -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productLaunchingDate" for = "p_productLaunchingDate"> Launching Date </label>
+	<div class = "controls">
+		<input type = "text" placeholder = "Enter date" name = "p.productLaunchingDate" id = "p_productLaunchingDate" />
+	</div>
+</div>
+
+<input type="submit" name="submit" value="Sign Up" class="btn btn-primary active">
+
+#{/form}
 
 

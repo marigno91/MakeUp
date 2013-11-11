@@ -3,6 +3,7 @@ package models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 import play.db.jpa.Blob;
 import play.db.jpa.Model;
@@ -19,6 +20,11 @@ public class Review extends Model{
 	public int packagingRate;
 	public int qualityRate;
 	public int environmentRate;
+	
+	@ManyToOne 
+	public Member m;
+	@ManyToOne
+	public Product p;
 	
 	public Review(String reviewDescription, Blob reviewPic, int overallRate, int priceRate, int packagingRate, int qualityRate, int environmentRate){
 		
