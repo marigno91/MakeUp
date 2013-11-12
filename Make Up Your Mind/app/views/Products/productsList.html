@@ -1,25 +1,14 @@
 #{extends 'main.html' /}
 #{set title:'Products List' /}
 
-<script type="text/javascript">
-
-	$(function() {
-
-		#{dtInitTag tabId:'tbproducts'/}
-		
-	});
-
-</script>
-
-<a href="@{Products.createProduct()}"> <i class="icon-plus-sign icon-2x"></i> Add a product </a>
 
  
-<h5> Products List: </h5>
+<h3> Products List: </h3>
 
 <div class="row-fluid">
   <div class="span10 offset1">
 
-			    <!-- Liste des Produits -->
+			    <!-- Products List -->
 				#{if list.size > 0}
 				<table id="tbproducts" class="table table-condensed table-striped table-bordered">
 					<thead>
@@ -45,16 +34,20 @@
 						
 							<td>${prod.productName}</td>
 							<td>${prod.productBrand}</td>
-							<td>${prod.productPic}</td>
+							<td>
+							   <div class="span4">
+      							#{if prod.productPic!=null}
+      							 <img src = "@{Products.getProductPic(prod.id)}" width = "100" height"100" class="img-thumbnail" > 
+ 							   	#{/if}
+      							</div> 
+							
+							</td>
 							<td>${prod.productPrice}</td>
 							<td>${prod.productAverageRate}</td> 
 						 	<td>${prod.numberOfRatings}</td> 
 							<td>${prod.productLaunchingDate}</td>
 							
 						</tr>
-						
-						
-					
 						#{/list}
 					</tbody>
 				</table>
@@ -65,3 +58,9 @@
   </div> <!--/span-->
 </div>   <!--/row-->
 
+<blockquote>
+  <p>Add a new product to our list and review it!</p>
+  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
+</blockquote>
+
+<a href="@{Products.createProduct()}"> <i class="icon-plus-sign icon-2x"></i> Add a product </a>

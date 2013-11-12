@@ -1,3 +1,65 @@
 #{extends 'main.html' /}
 #{set title:'Reviews List' /}
 
+
+<h3> Reviews List: </h3>
+
+<div class="row-fluid">
+  <div class="span10 offset1">
+
+			    <!-- Reviews List -->
+				#{if list.size > 0}
+				<table id="tbreviews" class="table table-condensed table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Member</th>
+							<th>Picture</th>
+							<th>Review</th>
+							<th>Overall Rating</th>
+							<th>Price Rating</th>
+							<th>Packaging Rating</th> 
+							<th>Quality Rate</th>
+							<th>Environment Rate</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						#{list items:list, as:'rev'}
+						
+						<tr>
+							<td>à remplir</td>
+							<td>${rev.m.memberName}</td>
+							<td>
+							   <div class="span4">
+      							#{if rev.reviewPic!=null}
+      							 <img src = "@{Reviews.getReviewPic(rev.id)}" width = "100" height"100" class="img-thumbnail" > 
+ 							   	#{/if}
+      							</div> 
+							</td>
+							<td>${rev.reviewDescription}</td>
+							<td>${rev.overallRate}</td> 
+						 	<td>${rev.priceRate}</td> 
+							<td>${rev.packagingRate}</td>
+							<td>${rev.qualityRate}</td>
+							<td>${rev.environmentRate}</td>
+						</tr>
+						#{/list}
+					</tbody>
+				</table>
+				#{/if} #{else}
+				<p>no products</p>
+				#{/else}
+
+  </div> <!--/span-->
+</div>   <!--/row-->
+
+
+
+
+<blockquote>
+  <p>Review your products</p>
+  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
+</blockquote>
+
+<a href="@{Reviews.createReview()}"> <i class="icon-plus-sign icon-2x"></i> Create a review now </a>

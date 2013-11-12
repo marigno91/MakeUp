@@ -1,12 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Add Product' /}
 
-<blockquote>
-  <p>Add a new product to our list and review it!</p>
-  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
-</blockquote>
-
-<!-- Form to edit profile -->
+<!-- Form to create product -->
 #{form @Products.saveProduct(), enctype:'multipart/form-data', id:'form'}
 
 <legend> Product Information </legend>
@@ -33,7 +28,6 @@
 <input type = "file" name = "p.productPic" />
 </div>
 </div>
-
 
 <!-- Price -->
 <div class = "control-group">

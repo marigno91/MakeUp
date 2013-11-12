@@ -17,9 +17,16 @@ public class Products  extends Controller {
 			productsList();
 		}
 	
+		public static void getProductPic(long id){
+			Product p = Product.findById(id);
+			response.setContentTypeIfNotSet(p.productPic.type());
+			renderBinary(p.productPic.get());
+		}
+		
 		public static void productsList(){
 			
-			List <Product> list = Product.find("order by id").fetch();
+			List <Product> list = Product.find("order by productname").fetch();
+					
 					
 			render(list);
 		}
@@ -29,5 +36,8 @@ public class Products  extends Controller {
 			render();
 		}
 		
-	
+		public static void productEdit(long id){
+			Product p = Product.findById(id);
+			render(p);
+		}
 }
