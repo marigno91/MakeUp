@@ -1,0 +1,204 @@
+#{extends 'main.html' /}
+#{set title:'Create Review' /}
+	
+<!-- Form to create review -->
+#{form @Reviews.saveReview(), enctype:'multipart/form-data', id:'form'}
+
+
+//liste des produits à mettre là
+
+<!-- Picture -->
+<div class = "control-group">
+<label class = "control-label" id = "label_r_reviewPic" for = "r_reviewPic"> Review Picture </label>
+<div class = "controls">
+<input type = "file" name = "r.reviewPic" />
+</div>
+</div>
+
+<!-- Description -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_r_reviewDescription" for = "r_reviewDescription"> Description </label>
+	<div class = "controls">
+		<textarea type="text" placeholder = "Enter a short description of the product" name = "r.reviewDescription" id = "r_reviewDescription"> </textarea>
+	</div>
+</div>
+
+<legend>Rate this product! </legend>
+
+
+<!-- overallRate -->
+<label class = "control-label" id = "label_r_overall" for = "r_overall"> Overall Rate </label>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="overall" id="optionsRadios1" value="1" checked>
+    1
+  </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="overall" id="optionsRadios2" value="2">
+    2
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="overall" id="optionsRadios3" value="3">
+    3
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="overall" id="optionsRadios4" value="4">
+    4
+    </label>
+    </div>
+    <div class="radio-inline">
+  <label>
+    <input type="radio" name="overall" id="optionsRadios5" value="5">
+    5
+    </label>
+</div>
+</div>
+
+
+<!-- priceRate -->
+<label class = "control-label" id = "label_r_price" for = "r_price"> Price Rate </label>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="price" id="optionsRadios1" value="1" checked>
+    1
+  </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="price" id="optionsRadios2" value="2">
+    2
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="price" id="optionsRadios3" value="3">
+    3
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="price" id="optionsRadios4" value="4">
+    4
+    </label>
+    </div>
+    <div class="radio-inline">
+  <label>
+    <input type="radio" name="price" id="optionsRadios5" value="5">
+    5
+    </label>
+</div>
+</div>
+
+<!-- packagingRate -->
+<label class = "control-label" id = "label_r_packaging" for = "r_packaging"> Packaging Rate </label>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="packaging" id="optionsRadios1" value="1" checked>
+    1
+  </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="packaging" id="optionsRadios2" value="2">
+    2
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="packaging" id="optionsRadios3" value="3">
+    3
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="packaging" id="optionsRadios4" value="4">
+    4
+    </label>
+    </div>
+    <div class="radio-inline">
+  <label>
+    <input type="radio" name="packaging" id="optionsRadios5" value="5">
+    5
+    </label>
+</div>
+</div>
+
+<!-- qualityRate -->
+<label class = "control-label" id = "label_r_quality" for = "r_quality"> Quality Rate </label>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="quality" id="optionsRadios1" value="1" checked>
+    1
+  </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="quality" id="optionsRadios2" value="2">
+    2
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="quality" id="optionsRadios3" value="3">
+    3
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="quality" id="optionsRadios4" value="4">
+    4
+    </label>
+    </div>
+    <div class="radio-inline">
+  <label>
+    <input type="radio" name="quality" id="optionsRadios5" value="5">
+    5
+    </label>
+</div>
+</div>
+
+<!-- environmentRate -->
+<label class = "control-label" id = "label_r_environment" for = "r_environment"> Environment Rate </label>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="environment" id="optionsRadios1" value="1" checked>
+    1
+  </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="environment" id="optionsRadios2" value="2">
+    2
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="environment" id="optionsRadios3" value="3">
+    3
+    </label>
+</div>
+<div class="radio-inline">
+  <label>
+    <input type="radio" name="environment" id="optionsRadios4" value="4">
+    4
+    </label>
+    </div>
+    <div class="radio-inline">
+  <label>
+    <input type="radio" name="environment" id="optionsRadios5" value="5">
+    5
+    </label>
+</div>
+</div>
+	
+<input type="submit" name="submit" value="Review" class="btn btn-primary active">
+
+#{/form}
+
+

@@ -1,0 +1,74 @@
+#{extends 'main.html' /}
+#{set title:'Edit Product' /}
+
+<div class="container-fluid">
+
+    <div class="row-fluid">
+   
+<!-- Form to edit product -->
+#{form @Products.saveProduct(), enctype:'multipart/form-data', id:'form'}
+
+<!-- ID -->
+<div class = "control-group">
+	<div class = "controls">
+		<input type = "hidden" value = "${p.id}" name = "p.id" id = "p_id" readonly />
+	</div>
+</div>
+
+<legend> Product Information </legend>
+<!-- name -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productName" for = "p_productName"> Product Name </label>
+	<div class = "controls">
+		<input type = "text" value = "${p.productName}" name = "p.productName" id = "p_productName" read only />
+	</div>
+</div>
+
+<!-- brand -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productBrand" for = "p_productBrand"> Product Brand </label>
+	<div class = "controls">
+		<input type = "text" value = "${p.productBrand}" name = "p.productBrand" id = "p_productBrand" read only />
+	</div>
+</div>
+
+							
+<!-- Picture -->
+<div class = "control-group">
+<label class = "control-label" id = "label_p_productPic" for = "p_productPic"> Product Picture </label>
+
+<div >
+    #{if p.productPic!=null}
+    <img src = "@{Products.getProductPic(p.id)}" width = "100" height"100" class="img-thumbnail" > 
+ 	#{/if}
+</div> 
+
+<div class = "controls">
+<input type = "file" name = "p.productPic" />
+</div>
+</div>
+
+
+<!-- Price -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productPrice" for = "p_productPrice"> Product Price </label>
+	<div class = "controls">
+		<input type = "text" value = "${p.productPrice}" name = "p.productPrice" id = "p_productPrice" />
+	</div>
+</div>
+
+<!-- Launching date -->
+<div class = "control-group">
+	<label class = "control-label" id = "label_p_productLaunchingDate" for = "p_productLaunchingDate"> Launching Date </label>
+	<div class = "controls">
+		<input type = "text" value = "${p.productLaunchingDate}" name = "p.productLaunchingDate" id = "p_productLaunchingDate" />
+	</div>
+</div>
+
+<input type="submit" name="submit" value="Edit Product" class="btn btn-primary active">
+
+#{/form}
+
+
+</div>
+</div>

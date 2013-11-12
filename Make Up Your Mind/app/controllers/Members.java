@@ -26,6 +26,19 @@ public class Members extends Controller {
 		render(m);
 	}
 	
+	public static void seeProfile(long id){
+		
+		Member m = Member.findById(id);
+		render(m);
+	}
+	
+	public static void rateMember(long id){
+		
+		Member m = Member.findById(id);
+		
+		render();
+	}
+	
 	public static void signUp(){
 		render();
 	}
