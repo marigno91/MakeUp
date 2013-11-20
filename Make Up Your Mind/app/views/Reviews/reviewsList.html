@@ -28,8 +28,16 @@
 						#{list items:list, as:'rev'}
 						
 						<tr>
-							<td>à remplir</td>
-							<td>${rev.m.memberName}</td>
+							<td>${rev.p.productName}</td>
+							<td> 
+							#{if rev.m.id!=m.id}
+							<a href="@{Members.seeProfile(rev.m.id)}">  ${rev.m.memberName} </a> 
+							#{/if}
+							#{else}
+							<a href="@{Members.Profile(rev.m.id)}">  ${rev.m.memberName} </a> 
+							#{/else}
+							
+							</td>
 							<td>
 							   <div class="span4">
       							#{if rev.reviewPic!=null}

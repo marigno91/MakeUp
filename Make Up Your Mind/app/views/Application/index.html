@@ -1,7 +1,34 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
+<div class="container-fluid">
 
-<a href="@{Members.profile(m.id)}"> See your profile </a>
+    <div class="row-fluid">
+		<div class = "span4 offset4"> 
+			
+		</div>
+	</div>
 
- 
+	<div class="row-fluid">
+		<div class = "span6">
+			<blockquote>
+  				<p>No amount of make-up can mask an ugly heart</p>
+			</blockquote>
+		</div>
+	</div>
+
+
+	<div class="row-fluid">
+		<div class = "span4"> 
+			<p> <a href="@{Members.profile(m.id)}"> See your profile </a> </p>  
+		</div>
+		<div class = "span4"> 
+			<a href="@{Products.productsList()}"> Check out the products </a>  
+		</div>
+		<div class = "span4"> 
+			<a href="@{Reviews.reviewsList()}"> Reviews to Make Up Your Mind! </a>  
+		</div>
+	</div>
+
+	
+</div>

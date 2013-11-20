@@ -1,7 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Profile' /}
 
-<h2> Your Profile </h2>
+<h2> Profile de ${m.memberName}</h2>
 
 <div class="container-fluid">
 
@@ -15,9 +15,14 @@
 
       <div class="span4">
       <div class="text-primary"> <strong> Pseudo: ${m.memberName} </strong> <br>
-      #{if m.memberRate != null}
-      Rating: ${m.memberRate} <em> (on ${m.numberOfRatings} votes) </em> <br>
+      Rating: 
+      
+      #{if m.numberOfRatings !=0}
+      ${(m.memberRate/m.numberOfRatings)} <em> (on ${m.numberOfRatings} votes) </em> <br>
       #{/if}
+      #{else}
+      ${m.memberRate} <em> (on ${m.numberOfRatings} votes) </em>
+      #{/else}
       </div>
       <small> Description: ${m.description} <br>
       Age: ${m.memberAge} <br>

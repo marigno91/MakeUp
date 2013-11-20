@@ -20,17 +20,27 @@ public class Product extends Model {
 	public float productAverageRate;
 	public int numberOfRatings = 0;
 	
-	public Date productLaunchingDate;
+	//public Date productLaunchingDate;
 	
 	//picture
 	public Blob productPic;
+	
+	public Product(String productName, String productBrand, String productPrice){
+		
+		this.productName = productName;
+		this.productBrand = productBrand;
+		this.productPrice = productPrice;
+		//this.productLaunchingDate = null;
+
+	}
+	
 	
 	public Product(String productName, String productBrand, String productPrice, Date productLaunchingDate){
 		
 		this.productName = productName;
 		this.productBrand = productBrand;
 		this.productPrice = productPrice;
-		this.productLaunchingDate = productLaunchingDate;
+		//this.productLaunchingDate = productLaunchingDate;
 
 	}
 	

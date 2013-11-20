@@ -1,11 +1,16 @@
 #{extends 'main.html' /}
 #{set title:'Create Review' /}
 	
+<div class="container-fluid">
+    <div class="row-fluid">
+  	
+	
 <!-- Form to create review -->
 #{form @Reviews.saveReview(), enctype:'multipart/form-data', id:'form'}
 
-
-//liste des produits à mettre là
+	<label id="label_r_p" for="r_p">Choose a product to review :</label>
+	  #{select 'productName', items:listProd, valueProperty:'productName', labelProperty:'productName'/}
+ 	
 
 <!-- Picture -->
 <div class = "control-group">
@@ -201,4 +206,5 @@
 
 #{/form}
 
-
+</div>
+</div>

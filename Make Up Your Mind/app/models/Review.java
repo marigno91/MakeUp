@@ -38,6 +38,17 @@ public class Review extends Model{
 		this.environmentRate = environmentRate;
 	}
 		
-	
+public Review(String reviewDescription, int overallRate, int priceRate, int packagingRate, int qualityRate, int environmentRate){
+		
+		this.reviewDescription = reviewDescription;
+		//this.reviewPic = null;
+		
+		this.overallRate = overallRate;
+		this.priceRate = priceRate;
+		this.packagingRate = packagingRate;
+		this.qualityRate = qualityRate;
+		this.environmentRate = environmentRate;
+	}
+		
 
 }

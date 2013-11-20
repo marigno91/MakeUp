@@ -20,7 +20,7 @@
 							<th>Price</th>
 							<th>Average Rate</th>
 							<th>Number of votes</th> 
-							<th>Launching Date</th>
+							<th>Rate this product!</th>
 						</tr>
 					</thead>
 					
@@ -43,9 +43,20 @@
 							
 							</td>
 							<td>${prod.productPrice}</td>
-							<td>${prod.productAverageRate}</td> 
+							<td>
+							 #{if prod.numberOfRatings !=0}
+     						 ${prod.productAverageRate/prod.numberOfRatings}
+      			   			#{/if}
+     						 #{else}
+     						 ${prod.productAverageRate} </em>
+     						 #{/else}
+							
+							
+							</td> 
 						 	<td>${prod.numberOfRatings}</td> 
-							<td>${prod.productLaunchingDate}</td>
+							<td> 
+							#{a @Products.rateProduct(prod.id)}<i class="icon-zoom-in icon-2x"></i> Rate it now!#{/a} 
+							</td>
 							
 						</tr>
 						#{/list}

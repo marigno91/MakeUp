@@ -40,4 +40,20 @@ public class Products  extends Controller {
 			Product p = Product.findById(id);
 			render(p);
 		}
+		
+		public static void saveRating(Product p, String rate){
+			
+			p.productAverageRate = p.productAverageRate + Integer.parseInt(rate);
+			p.numberOfRatings = p.numberOfRatings + 1;
+			
+			p.save();
+			
+			productsList();
+		}
+		
+		public static void rateProduct(long id){
+			
+			Product p = Product.findById(id);
+			render(p);
+		}
 }
