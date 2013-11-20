@@ -4,6 +4,15 @@
 
 <h3> Reviews List: </h3>
 
+<div class = "span6 offset2">
+<blockquote>
+  <p>Review your products</p>
+  <small> <a href="@{Reviews.createReview()}"> <i class="icon-plus-sign"></i> Create a review now </a>
+   <cite title="Source Title"></cite></small>
+</blockquote>
+</div>
+
+
 <div class="row-fluid">
   <div class="span10 offset1">
 
@@ -56,7 +65,7 @@
 					</tbody>
 				</table>
 				#{/if} #{else}
-				<p>no products</p>
+				<p>There is no reviews in our base. Create one now!</p>
 				#{/else}
 
   </div> <!--/span-->
@@ -65,9 +74,3 @@
 
 
 
-<blockquote>
-  <p>Review your products</p>
-  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
-</blockquote>
-
-<a href="@{Reviews.createReview()}"> <i class="icon-plus-sign icon-2x"></i> Create a review now </a>

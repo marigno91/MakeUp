@@ -2,10 +2,18 @@
 #{set title:'Products List' /}
 
 
- 
-<h3> Products List: </h3>
+		<h3> Products List: </h3>
 
-<div class="row-fluid">
+	
+	<div class = "span6 offset2">
+		<blockquote>
+  		<p>Add a new product to our list and review it! </p>
+  		<small><a href="@{Products.createProduct()}"> <i class="icon-plus-sign "></i> Add a product </a> <cite title="Source Title"></cite></small>
+		</blockquote>		
+
+	</div>
+ 
+
   <div class="span10 offset1">
 
 			    <!-- Products List -->
@@ -63,15 +71,9 @@
 					</tbody>
 				</table>
 				#{/if} #{else}
-				<p>no products</p>
+				<p> <br> There is currently no products in our base. Create one now!</p>
 				#{/else}
 
   </div> <!--/span-->
-</div>   <!--/row-->
 
-<blockquote>
-  <p>Add a new product to our list and review it!</p>
-  <small>The Make Up Your Mind Team <cite title="Source Title"></cite></small>
-</blockquote>
 
-<a href="@{Products.createProduct()}"> <i class="icon-plus-sign icon-2x"></i> Add a product </a>
